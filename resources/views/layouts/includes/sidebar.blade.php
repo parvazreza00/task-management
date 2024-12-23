@@ -7,8 +7,8 @@
 				 <a href="index.html">
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">
-						  <img src="../images/logo-dark.png" alt="">
-						  <h3><b>Sunny</b> Admin</h3>
+						  
+						  <h3><b>Task-Management</b></h3>
 					 </div>
 				</a>
 			</div>
@@ -18,7 +18,7 @@
       <ul class="sidebar-menu" data-widget="tree">
 
 		<li>
-          <a href="index.html">
+          <a href="{{ url('/dashboard') }}">
             <i data-feather="pie-chart"></i>
 			<span>Dashboard</span>
           </a>
@@ -57,12 +57,12 @@
       </ul>
     </section>
 
-	<div class="sidebar-footer">
+	{{-- <div class="sidebar-footer">
 		<!-- item-->
 		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings" aria-describedby="tooltip92529"><i class="ti-settings"></i></a>
 		<!-- item-->
 		<a href="mailbox_inbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ti-email"></i></a>
 		<!-- item-->
 		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ti-lock"></i></a>
-	</div>
+	</div> --}}
   </aside>

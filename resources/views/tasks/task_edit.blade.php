@@ -10,7 +10,7 @@
                     <div class="d-inline-block align-items-center">
                         <nav>
                             <ol class="breadcrumb">
-                                <a href="{{ route('tasks.index') }}" class="btn btn-primary">Task List</a>
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
 
                             </ol>
                         </nav>
@@ -32,15 +32,16 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-<form action="{{ route('tasks.store') }}" method="post" >
+<form action="{{ route('tasks.update', $task->id) }}" method="post" >
     @csrf
+    @method('PUT')
     <div class="row">
         <div class="col-12">
             <div class="form-group">
                 <h5>Task Title</h5>
                 <div class="controls">
                     <input type="text" name="task_title" class="form-control"
-                        placeholder="Task Title">
+                        value="{{ $task->task_title }}" placeholder="Task Title">
                         @error('task_title')
     <span class="text-danger">{{ $message }}</span>
 @enderror
@@ -50,7 +51,7 @@
             <div class="form-group">
                 <h5>Task Description</h5>
                 <div class="controls">
-                    <textarea name="task_des" id="textarea" class="form-control" placeholder="Task Description"></textarea>
+                    <textarea name="task_des" id="textarea" class="form-control" >{{ $task->task_des }}</textarea>
                     @error('task_des')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -61,10 +62,10 @@
                 <h5>Select Task Status</h5>
                 <div class="controls">
                     <select name="status" class="form-control">
-                        <option value="">Select Task Status</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Completed">Completed</option>
+                        <option value="" disabled>Select Task Status</option>
+                        <option value="In Progress" {{ $task->status== 'In Progress' ? 'selected' : ''}}>In Progress</option>
+                        <option value="Pending" {{ $task->status== 'Pending' ? 'selected' : ''}}>Pending</option>
+                        <option value="Completed" {{ $task->status== 'Completed' ? 'selected' : ''}}>Completed</option>
                     </select>
                     @error('status')
     <span class="text-danger">{{ $message }}</span>
@@ -74,7 +75,7 @@
             <div class="form-group">
                 <h5>Enter Date </h5>
                 <div class="controls">
-                    <input type="date" name="due_date" class="form-control">
+                    <input type="date" name="due_date" class="form-control" value="{{ $task->due_date }}">
                 </div>
                 @error('due_date')
                 <span class="text-danger">{{ $message }}</span>
@@ -88,7 +89,7 @@
 
 
     <div class="text-xs-right">
-        <button type="submit" class="btn btn-rounded btn-info">Submit</button>
+        <button type="submit" class="btn btn-rounded btn-info">Update</button>
     </div>
 </form>
 

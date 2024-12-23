@@ -40,7 +40,7 @@
 			<a href="#" class="waves-effect waves-light rounded dropdown-toggle" data-toggle="dropdown" title="Notifications">
 			  <i class="ti-bell"></i>
 			</a>
-			<ul class="dropdown-menu animated bounceIn">
+			{{-- <ul class="dropdown-menu animated bounceIn">
 
 			  <li class="header">
 				<div class="p-20">
@@ -98,20 +98,20 @@
 			  <li class="footer">
 				  <a href="#">View all</a>
 			  </li>
-			</ul>
+			</ul> --}}
 		  </li>
 
 	      <!-- User Account-->
           <li class="dropdown user user-menu">
 			<a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-				<img src="../images/avatar/1.jpg" alt="">
+				<img src="{{ asset('backend/images/avatar/avatar-1.png') }}" alt="">
 			</a>
 			<ul class="dropdown-menu animated flipInX">
 			  <li class="user-body">
-				 <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
+				 {{-- <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
-				 <div class="dropdown-divider"></div>
+				 <div class="dropdown-divider"></div> --}}
 				 {{-- <a class="dropdown-item" href="{{ route('logout') }}"><i class="ti-lock text-muted mr-2"></i> Logout</a> --}}
                  <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="ti-lock text-muted mr-2"></i> Logout
@@ -123,11 +123,11 @@
                 </li>
 			</ul>
           </li>
-		  <li>
+		  {{-- <li>
               <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light">
 			  	<i class="ti-settings"></i>
 			  </a>
-          </li>
+          </li> --}}
 
         </ul>
       </div>

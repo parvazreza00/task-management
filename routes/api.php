@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\UserAuthenticatedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// public routes
+Route::post('/register', [UserAuthenticatedController::class, 'register']);
+Route::post('/login', [UserAuthenticatedController::class, 'login']);
+
+Route::get('/all/tasks', [TaskController::class, 'showAllTasks']);
+Route::get('/tasks/{id}', [TaskController::class, 'shwoSingleTask']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/tasks/store', [TaskController::class, 'storeApiTask']);
+    Route::put('/tasks/{id}', [TaskController::class, 'updateApiTask']);
+    Route::delete('/tasks/{id}', [TaskController::class, 'destroyApiTask']);
+
+    Route::post('/logout', [UserAuthenticatedController::class, 'logout']);
 });

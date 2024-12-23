@@ -5,9 +5,9 @@
 			<a class="nav-link" href="javascript:void(0)">FAQ</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">www.onlineshopping.com</a>
+			<a class="nav-link" href="#">www.taskmanagement.com</a>
 		  </li>
 		</ul>
     </div>
-	  &copy; 2020 <a href="#">online-shopping</a>. All Rights Reserved.
+	  &copy; 2024 <a href="#">task-management</a>. All Rights Reserved.
   </footer>
