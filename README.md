@@ -31,6 +31,11 @@ A Laravel-based Task Management System that allows users to register, log in, lo
 - php artisan serve and
 - npm run dev
 
+## There have 3 users
+- emails 1. tomal@gmail.com, 2. hasan@gmail.com, 3. arif@gmail.com
+- password: 12345678 (all)
+** And you can make Register and login and dive the TMS Application
+
 ## API Documentation
 - pulbic routes
 --- Register: POST /api/register
