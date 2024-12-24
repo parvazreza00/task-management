@@ -23,6 +23,7 @@ Route::post('/login', [UserAuthenticatedController::class, 'login']);
 Route::get('/all/tasks', [TaskController::class, 'showAllTasks']);
 Route::get('/tasks/{id}', [TaskController::class, 'shwoSingleTask']);
 
+//private routes
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/tasks/store', [TaskController::class, 'storeApiTask']);
     Route::put('/tasks/{id}', [TaskController::class, 'updateApiTask']);
