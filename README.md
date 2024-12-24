@@ -36,18 +36,16 @@ A Laravel-based Task Management System that allows users to register, log in, lo
 - password: 12345678 (all)
 ** And you can make Register and login and dive the TMS Application
 
-## API Documentation
-- pulbic routes
---- Register: POST /api/register
---- Login: POST /api/login
---- Get all Task : GET api/all/tasks
---- Get one Task : GET api/tasks/id
+API Documentation
+Public Routes
+Register: POST /api/register
+Login: POST /api/login
+Get all Tasks: GET /api/all/tasks
+Get one Task: GET /api/tasks/{id}
 
-- CRUD Operations:
-
---- Private routes
---- POST /api/tasks/store
---- PUT /api/tasks/{id}
---- DELETE /api/tasks/{id}
---- Logout POST /api/logout
+CRUD Operations (Private Routes)
+Create Task: POST /api/tasks/store
+Update Task: PUT /api/tasks/{id}
+Delete Task: DELETE /api/tasks/{id}
+Logout: POST /api/logout
 
