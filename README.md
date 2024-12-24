@@ -21,7 +21,7 @@ A Laravel-based Task Management System that allows users to register, log in, lo
 ## Installation
 1. Clone the repository:   
  ```bash
-   git clone https://github.com/yourusername/task-management.git
+   git clone https://github.com/parvazreza00/task-management.git
 - composer install
 - npm install   
 - copy .env.example .env
